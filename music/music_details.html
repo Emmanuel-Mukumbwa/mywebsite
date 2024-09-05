@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="upload_music.html">Upload Music</a>
+            <a href="login.html">Login</a> | <a href="register.html">Register</a>
+            <a href="profile.html">Profile</a>
+            <a href="admin.html">Admin Panel</a>
+        </nav>
+        <h1>Music Details</h1>
+    </header>
+    <main>
+        <h2 id="music-title">Music Title</h2>
+        <p id="music-artist">Artist: </p>
+        <p id="music-genre">Genre: </p>
+        <audio controls id="music-file">
+            <source id="audio-source" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="comments">
+            <h3>Comments</h3>
+            <ul id="comment-list">
+                <!-- Comments will be dynamically added here -->
+            </ul>
+            <form id="comment-form">
+                <textarea id="comment-text" name="comment" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
+        <div id="rating">
+            <h3>Rate This Music</h3>
+            <input type="number" id="rating-input" min="1" max="5">
+            <button id="submit-rating">Submit Rating</button>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="forrmm.html">CONTACT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="contact-form">
+            <div class="form-container">
+                <form onsubmit="event.preventDefault(); validateform()" autocomplete="on">
+                    <h1>Contact Us</h1>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+            
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+            
+                    <div class="center">
+                        <input type="submit" value="Send Message">
+                        <p id="success"></p>
+                    </div>
+                </form>    
+            </div>
+        </section>
+        <div class="firth">
+        <div class="map-location">
+            <h2>Find Us</h2>
+            <p>Visit us at Mzuzu University, Malawi or use the map below to find us:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118183.64257623183!2d34.26810417187355!3d-11.647355641469107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1953bb67c4389d2f%3A0x2af4c9a817d8dcb!2sMzuzu%20University!5e0!3m2!1sen!2smw!4v1633482516320!5m2!1sen!2smw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to validate the form and handle submission
+function validateform() {
+    // Get form elements
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const successMessage = document.getElementById('success');
+    
+    // Clear any previous messages
+    successMessage.textContent = '';
+    
+    // Basic validation
+    if (name === '' || email === '' || message === '') {
+        successMessage.textContent = 'All fields are required.';
+        successMessage.style.color = 'red';
+        return;
+    }
+    
+    // Validate email format
+    if (!validateEmail(email)) {
+        successMessage.textContent = 'Please enter a valid email address.';
+        successMessage.style.color = 'red';
+        return;
+    }
+    
+    // Simulate form submission
+    simulateFormSubmission(name, email, message);
+}
+
+// Function to validate email format
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Function to simulate form submission
+function simulateFormSubmission(name, email, message) {
+    // Simulate a network request delay
+    setTimeout(() => {
+        // You would typically send the form data to the server here
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Message: ${message}`);
+
+        // Show success message
+        const successMessage = document.getElementById('success');
+        successMessage.textContent = 'Your message has been sent successfully!';
+        successMessage.style.color = 'green';
+        
+        // Optionally clear the form
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    }, 1000); // Simulated network delay
+}
+
+    </script>
+</body>
+</html>

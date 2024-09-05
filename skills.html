@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills and Proficiency</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #0057d9; /* Blue background for nav */
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffdd57; /* Gold color on hover */
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #ffdd57; /* Gold underline effect */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #004aad;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .skills {
+            width: 45%;
+        }
+
+        h2 {
+            color: #0066cc;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Tooltip Styling */
+        .tooltip {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tooltip .content {
+            visibility: hidden;
+            opacity: 0;
+            width: 280px;
+            background: #f7f7f7;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            z-index: 10;
+        }
+
+        .tooltip:hover .content {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 10px;
+            height: 10px;
+            background: #f7f7f7;
+        }
+
+        /* Skill Proficiency Bars */
+        .proficiency-section {
+            width: 45%;
+        }
+
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            margin: 15px 0;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .html-css {
+            width: 80%;
+        }
+
+        .javascript {
+            width: 70%;
+        }
+
+        .programming {
+            width: 90%;
+        }
+
+        .interpersonal {
+            width: 75%;
+        }
+
+        .analytical {
+            width: 85%;
+        }
+
+        .tooltip-icon {
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="skills.html">SKILLS</a></li>
+        <li><a href="project.html">PROJECTS</a></li>
+    </ul>
+
+    <div class="container">
+        <h1>My Skills & Proficiency</h1>
+
+        <div class="skills-section">
+            <!-- Skills with Tooltips -->
+            <div class="skills">
+                <div class="tooltip">
+                    <h2>Computer Programming Skills <span class="tooltip-icon">?</span></h2>
+                    <div class="content">
+                        <h3>Computer Programming Skills</h3>
+                        <p>I specialize in C++, C, and Python programming languages.</p>
+                    </div>
+                </div>
+
+                <div class="tooltip">
+                    <h2>HTML/CSS/JavaScript Skills <span class="tooltip-icon">?</span></h2>
+                    <div class="content">
+                        <h3>Web Development Skills</h3>
+                        <p>I use these skills for web designing and development.</p>
+                    </div>
+                </div>
+
+                <div class="tooltip">
+                    <h2>Interpersonal Skills <span class="tooltip-icon">?</span></h2>
+                    <div class="content">
+                        <h3>Interpersonal Skills</h3>
+                        <p>These skills facilitate interaction and communication with colleagues and clients.</p>
+                    </div>
+                </div>
+
+                <div class="tooltip">
+                    <h2>Analytical Skills <span class="tooltip-icon">?</span></h2>
+                    <div class="content">
+                        <h3>Analytical Skills</h3>
+                        <p>Skills include data analysis, logical thinking, and research used in critical situations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Proficiency Bars -->
+            <div class="proficiency-section">
+                <h2>Skill Proficiency</h2>
+                <div class="skill-bar">
+                    <span class="programming">90% Computer Programming</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span class="html-css">80% HTML/CSS</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span class="javascript">70% JavaScript</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span class="interpersonal">75% Interpersonal</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span class="analytical">85% Analytical</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach((tooltip) => {
+        tooltip.classList.add('show-tooltip');
+        setTimeout(() => {
+            tooltip.classList.remove('show-tooltip');
+        }, 3000);
+    });
+});
+
+    </script>
+</body>
+</html>

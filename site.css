@@ -1,0 +1,55 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* AliceBlue background for the whole page */
+    color: #333; /* Dark gray text color */
+}
+
+/* Sitemap Container */
+.sitemap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the sitemap */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Sitemap Title */
+.sitemap h1 {
+    color: #004aad; /* Dark blue color for the title */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sitemap Paragraph */
+.sitemap p {
+    font-size: 1rem;
+    color: #555; /* Darker gray for the paragraph text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sitemap List */
+.sitemap-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.sitemap-list li {
+    margin-bottom: 10px;
+}
+
+.sitemap-list a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sitemap-list a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

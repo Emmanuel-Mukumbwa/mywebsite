@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="for.css">
+    <script src="script.js" type="text/javascript"></script>
+
+</head>
+<body>
+      <h1 class="heading">
+        <div class="logo">
+            a<span class="highlight">R</span>elic
+        </div>
+        
+      </h1>
+
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="skills.html">SKILLS</a></li>
+        <li><a href="project.html">PROJECTS</a></li>
+        <li><a href="sitemap.html">SITEMAP</a></li>
+    </ul>
+   
+
+    <div class="fist">
+    <div class="box">
+        <img class="image1" src="myphoto.jpg">
+    </div>
+    </div>
+
+    <div class="second">
+        <h1>Hey, I'm <br> <span>Emmanuel aRelic Mukumbwa</span></h1>
+        <p style="margin-top: 70px; text-align: justify;">As a passionate technology enthusiast and student, 
+            I'm excited to share my journey with you. Currently, I'm upgrading my skills at Mzuzu University, 
+            working towards a Bachelor of Science in Information and Communication Technology. 
+            With a solid foundation in computing and information systems from my Advanced Diploma at the Malawi 
+            University of Business and Applied Sciences (2021), 
+            I'm dedicated to leveraging my expertise to deliver innovative technological solutions to various communities.
+        </p><hr>
+    </div>
+
+
+    <div class="third">
+      <h3>PROJECTS</h3>
+      <hr>
+  
+      <div class="projects-container">
+          <!-- Slideshow Section -->
+         
+  
+          <!-- Description Section -->
+          <div class="slideshow">
+            <img name="slide" src="default-image.jpg" alt="Project Image" class="project-image">
+        </div>
+          <div class="project-descriptions">
+            <div class="project-item">
+                <h3>Landing Page Design</h3>
+                <p>This project involved designing a modern and engaging landing page. The page features a clean 
+                    layout with a focus on user experience, including key sections such as a navigation menu, 
+                    introduction, and call-to-action buttons. The design emphasizes a responsive layout, intuitive 
+                    navigation, and a visually appealing presentation to effectively capture and retain visitor 
+                    interest.</p>
+        <a href="project1.html" class="project-link">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Music Website</h3>
+                <p>This project involved creating a comprehensive music website designed for uploading, promoting, 
+                    and managing music. The website includes functionalities for user registration and login, music 
+                    upload and download, as well as an admin panel for managing content. Key features include music 
+                    promotion tools, user profile management, and a robust system for handling music metadata and 
+                    user interactions. The design focuses on providing a seamless user experience and efficient
+                     management of music content.</p>
+        <a href="music/indexx.html" class="project-link">View Project</a>
+            </div>
+          
+        </div>
+      </div>
+  </div>
+  
+
+   <section class="fourth">
+    <h3>SKILLS, TOOLS, & TECHNOLOGIES</h3>
+    <hr>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h4>SKILLS</h4>
+            <p>Computer Programming Skills</p>
+            <p>Web Design & Development</p>
+            <p>Interpersonal Communication</p>
+            <p>Analytical & Problem-Solving</p>
+            <p>Testing and Debugging Skills</p>
+            <p>System Architecture Design</p>
+            <p>Responsive Design</p>
+            <p>C/C++ Programming</p>
+        </div>
+        <div class="skill-card">
+            <h4>TOOLS</h4>
+            <p>GitHub</p>
+            <p>Sublime Text</p>
+            <p>Visual Studio Code</p>
+            <p>Notepad++</p>
+            <p>Postman</p>
+        </div>
+        <div class="skill-card">
+            <h4>TECHNOLOGIES</h4>
+            <p>JavaScript</p>
+            <p>HTML & CSS</p>
+            <p>PHP</p>
+            <p>MySQL</p>
+            <p>Laravel</p>
+            <p>React</p>
+            <p>C</p>
+            <p>C++</p>
+        </div>
+    </div>
+</section>
+
+  
+
+<div class="firth">
+    <div id="overlay">
+        <form onsubmit="event.preventDefault(); validateform()" autocomplete="on">
+            <h1>Contact Us</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+    
+            <div class="center">
+                <input type="submit" value="Send Message">
+                <p id="success"></p>
+            </div>
+        </form>    
+    </div>
+
+    <div class="instructions">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us using the form above. Our team will get back to you as soon as possible.</p>
+    </div>
+
+    <div class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Sign up for our newsletter to receive the latest updates, news, and special offers directly in your inbox.</p>
+        <form id="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter()">
+            <input type="email" id="newsletter-email" placeholder="Your Email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+    <div class="interactive-elements">
+        <h2>Interactive Elements</h2>
+        <p>Explore our interactive features to engage with our content and services.</p>
+        <button onclick="showInteractiveFeature()">Show Feature</button>
+        <div id="feature-details" style="display:none;">
+            <p>Here you can add interactive content or features related to your service.</p>
+        </div>
+    </div>
+
+    <div class="map-location">
+        <h2>Find Us</h2>
+        <p>Visit us at Mzuzu University, Malawi or use the map below to find us:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118183.64257623183!2d34.26810417187355!3d-11.647355641469107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1953bb67c4389d2f%3A0x2af4c9a817d8dcb!2sMzuzu%20University!5e0!3m2!1sen!2smw!4v1633482516320!5m2!1sen!2smw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<section class="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <hr>
+    <div class="event-list">
+        <div class="event-item">
+            <h3>Web Development Workshop</h3>
+            <p>Date: October 15, 2024</p>
+            <p>Join us for an interactive workshop on web development, where we'll cover the latest trends and techniques in web design and programming.</p>
+        </div>
+        <div class="event-item">
+            <h3>Tech Conference 2024</h3>
+            <p>Date: November 5, 2024</p>
+            <p>Don't miss the annual Tech Conference where industry leaders share their insights on technology and innovation.</p>
+        </div>
+        <div class="event-item">
+            <h3>Code Hackathon</h3>
+            <p>Date: December 10, 2024</p>
+            <p>Participate in our 24-hour coding challenge and compete for exciting prizes while collaborating with other developers.</p>
+        </div>
+    </div>
+</section>
+
+
+
+   <div class="six">
+
+    <p>Greetings:</p><hr>
+
+    <button onclick="myFunction()">CLICK ME</button><hr>
+    
+    <p id="demo"></p><hr>
+
+   </div>
+
+   <div class="footer1">
+    <footer>
+        <div>
+            <img src="15.PNG" class="icon" alt="Phone Icon">
+            <span>Phone</span>
+            <a href="tel:0882470666">0882470666</a>
+        </div>
+        <div>
+            <img src="12.jfif" class="icon" alt="WhatsApp Icon">
+            <span>WhatsApp</span>
+            <a href="https://wa.me/0992374652">0992374652</a>
+        </div>
+        <div>
+            <img src="GMAIL.PNG" class="icons" alt="Email Icon">
+            <span>Email</span>
+            <a href="mailto:emukumbwa2419@gmail.com">emukumbwa2419@gmail.com</a>
+        </div>
+        <div>
+            <img src="FB.PNG" class="icons" alt="Facebook Icon">
+            <span>Social</span>
+            <a href="https://facebook.com/EmmanuelARelic">Emmanuel ARelic snr.</a>
+        </div>
+        
+    </footer>
+</div>
+
+
+
+    
+
+
+<script> 
+  var i = 0; //start print
+  var images = [];
+  var time = 3000;
+
+  //image list
+  images[0] = 'image1.jpg';
+  images[1] = 'image2.jpg';
+  images[2] = 'image3.jpg';
+
+  //change image
+  function changeimg(){
+    document.slide.src = images[i];
+
+    if(i<images.length - 1){
+     i++;
+   } else {
+        i = 0;
+      }
+     
+     setTimeout("changeimg()", time);
+  } 
+
+  window.onload = changeimg;
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Attach event listener to the newsletter subscription form
+    document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get the email value
+        const email = document.getElementById('newsletter-email').value;
+
+        // Validate email
+        if (validateEmail(email)) {
+            // Simulate a successful subscription
+            subscribeNewsletter(email);
+        } else {
+            alert("Please enter a valid email address.");
+        }
+    });
+});
+
+// Function to validate email format
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Function to simulate newsletter subscription
+function subscribeNewsletter(email) {
+    // Simulate a network request
+    setTimeout(() => {
+        // Here you would typically make an API call to subscribe the email
+        console.log("Subscribed with email:", email);
+        
+        // Show success message
+        alert("Thank you for subscribing! We will keep you updated.");
+        
+        // Optionally, clear the form
+        document.getElementById('newsletter-email').value = '';
+    }, 1000); // Simulate a delay
+}
+
+// Function to validate form and handle submission
+function validateform() {
+    // Get form elements
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const successMessage = document.getElementById('success');
+    
+    // Clear any previous messages
+    successMessage.textContent = '';
+
+    // Basic validation
+    if (name === '' || email === '' || message === '') {
+        successMessage.textContent = 'All fields are required.';
+        successMessage.style.color = 'red';
+        return;
+    }
+    
+    // Validate email format
+    if (!validateEmail(email)) {
+        successMessage.textContent = 'Please enter a valid email address.';
+        successMessage.style.color = 'red';
+        return;
+    }
+    
+    // Simulate a form submission
+    simulateFormSubmission(name, email, message);
+}
+
+// Function to validate email format
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Function to simulate form submission
+function simulateFormSubmission(name, email, message) {
+    // Simulate a network request delay
+    setTimeout(() => {
+        // You would typically send the form data to the server here
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Message: ${message}`);
+
+        // Show success message
+        const successMessage = document.getElementById('success');
+        successMessage.textContent = 'Your message has been sent successfully!';
+        successMessage.style.color = 'green';
+        
+        // Optionally clear the form
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    }, 1000); // Simulated network delay
+}
+
+</script>
+</body>
+</html>

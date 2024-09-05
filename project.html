@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft blue gradient */
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333; /* Darker text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header section */
+        .header {
+            background-color: #0057d9; /* Blue background for header */
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header ul li {
+            margin: 0 15px;
+        }
+
+        .header ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('hero_image.jpg'); /* High-quality background image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .hero button {
+            background-color: #ffdd57;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Project Overview Section */
+.project-overview {
+    padding: 50px 20px;
+    background-color: #f0f8ff; /* AliceBlue */
+}
+
+.project-overview h2 {
+    text-align: center;
+    color: #004aad; /* Deep blue for the heading */
+}
+
+.project-overview p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature-item {
+    width: 45%; /* Adjust width to fit two features in one row */
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.4em;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+        /* Project Showcase Section */
+        .project-showcase {
+            padding: 50px 20px;
+        }
+
+        .project-showcase h2 {
+            text-align: center;
+        }
+
+        .showcase-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .showcase-item {
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .showcase-ite img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Team and Collaboration Section */
+.team {
+    padding: 50px 20px;
+    background-color: #f0f8ff;
+}
+
+.team h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #004aad; /* Deep blue for the heading */
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 18%; /* Adjust width to fit 5 members */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure images fit within the circle */
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    color: #333; /* Darker text color for readability */
+}
+
+.team-member p {
+    margin: 0;
+    color: #666; /* Lighter text color for position */
+}
+
+
+        /* Project Timeline Section */
+        .timeline {
+            padding: 50px 20px;
+        }
+
+        .timeline h2 {
+            text-align: center;
+        }
+
+        .timeline-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .timeline-list li {
+            background-color: #f0f8ff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq {
+    padding: 60px 30px;
+    background-color: #f0f8ff; /* Soft blue background for a lighter, more inviting feel */
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #004aad;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+.faq-item h3 {
+    font-size: 1.6em;
+    color: #004aad;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.faq-item h3::before {
+    content: "Q";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.8em;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.faq-item p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-item p::before {
+    content: "A: ";
+    font-weight: bold;
+    color: #004aad;
+}
+
+.faq-item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .faq-item {
+        padding: 15px;
+    }
+
+    .faq h2 {
+        font-size: 2em;
+    }
+
+    .faq-item h3 {
+        font-size: 1.4em;
+    }
+
+    .faq-item p {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Our Latest Projects</h1>
+        <p>Discover our innovative and creative projects.</p>
+        <button>Learn More</button>
+    </div>
+
+   <!-- Project Overview Section -->
+<div class="project-overview">
+    <h2>Hostel Management System</h2>
+    <p>This Hostel Management System is designed to digitize and streamline the management of hostel operations. It includes modules for booking, payments, maintenance, and fault reporting, making it easier for hostel owners to manage their properties efficiently.</p>
+
+    <div class="features">
+        <div class="feature-item">
+            <h3>Feature 1: Online Booking</h3>
+            <p>Allow students to book rooms online with real-time availability status and instant confirmation.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 2: Digital Payments</h3>
+            <p>Facilitate secure, hassle-free payments through various online payment methods integrated into the system.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 3: Maintenance Tracking</h3>
+            <p>Track maintenance requests and tasks, allowing hostel owners to address issues quickly and effectively.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 4: Fault Reporting</h3>
+            <p>Provide an easy-to-use fault reporting system where students can report issues directly to management.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 5: User Management</h3>
+            <p>Manage student and staff profiles, track accommodations, and monitor usage statistics in one platform.</p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Project Showcase Section -->
+    <div class="project-showcase">
+        <h2>Project Showcase</h2>
+        <div class="showcase-grid">
+            <div class="showcase-item">
+                <img src="hostel-management-software.jpg" alt="Project 1">
+                <p>Project </p>
+            </div>
+            <div class="showcase-item">
+                <img src="user-login-form-output.jpg" alt="Project 2">
+                <p>Project </p>
+            </div>
+            <div class="showcase-item" style="height: 250;">
+                <img style="height: 250;" src="benefits-of-hostel-management-system.png" alt="Project 3">
+                <p>Project Three </p>
+            </div>
+        </div>
+    </div>
+
+   <!-- Team and Collaboration Section -->
+<div class="team">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="team1.jpg" alt="Team Member 1">
+            <h3>Mr S. Nayeja</h3>
+            <p>Project Supervisor</p>
+        </div>
+        <div class="team-member">
+            <img src="team2.jpg" alt="Team Member 2">
+            <h3>Emmanuel Mukumbwa</h3>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="team3.jpg" alt="Team Member 3">
+            <h3>Anthony Chaima</h3>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="team4.jpg" alt="Team Member 4">
+            <h3>Geofrey Mwangomba</h3>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="team5.jpg" alt="Team Member 5">
+            <h3>Aubrey Mulenga</h3>
+            <p>Developer</p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Project Timeline Section -->
+    <div class="timeline">
+        <h2>Project Timeline</h2>
+        <ul class="timeline-list">
+            <li><strong>July 2024:</strong> Project Initiation</li>
+            <li><strong>August 2024:</strong> Prototype Development</li>
+            <li><strong>November 2024:</strong> Final Release</li>
+        </ul>
+    </div>
+
+    
+
+  <!-- FAQ Section -->
+<div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>How do I book a room?</h3>
+        <p>You can book a room by logging into the system and checking room availability under the 'Bookings' section.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What payment methods are accepted?</h3>
+        <p>We accept all major credit cards, PayPal, and mobile money services like M-Pesa.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How can I report a fault?</h3>
+        <p>To report any faults, simply go to the 'Maintenance' section in your dashboard and submit a fault report.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Can I extend my stay in the hostel?</h3>
+        <p>Yes, you can request an extension via the 'Booking' section, subject to availability of rooms.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What if I need to cancel my booking?</h3>
+        <p>Go to the 'My Bookings' section, find your active booking, and click 'Cancel'. Cancellation policies may apply.</p>
+    </div>
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="upload_music.html">Upload Music</a>
+        <a href="login.html">Login</a> | <a href="register.html">Register</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html">Admin Panel</a>
+    </nav>
+    
+        <h1>Upload Music</h1>
+    </header>
+    <main>
+        <form id="upload-music-form" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist" name="artist" required>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+            <label for="file">Music File:</label>
+            <input type="file" id="file" name="file" accept="audio/*" required>
+            <button type="submit">Upload Music</button>
+        </form>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

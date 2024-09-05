@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007bff; /* Blue background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section {
+    background: #fff; /* White background for sections */
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+section h2 {
+    color: #004aad; /* Dark blue for headings */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.skill-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-card h4 {
+    color: #007bff;
+    font-size: 1.5
