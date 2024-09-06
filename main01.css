@@ -1,0 +1,679 @@
+body {
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft blue gradient */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improve text readability */
+    box-sizing: border-box; /* Ensure padding doesn't affect element size */
+}
+
+.heading {
+    color: #004aad;
+    text-align: center;
+    margin: 2rem 0; /* Use rem for responsiveness */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0; /* Adjust padding for better responsiveness */
+    background-color: #0057d9;
+    margin: 0;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+ul li {
+    position: relative;
+    padding: 0.625rem 1.25rem; /* Use rem to ensure consistent padding */
+    font-weight: bold;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffdd57;
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #ffdd57;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.logo .highlight {
+    font-size: 2.5rem;
+    border: 2px solid blue;
+    border-right: transparent;
+    padding-left: 0.3125rem;
+    color: red;
+}
+
+.first, .second, .third, .fourth, .firth, .six, .seven, .nine, .ten {
+    background: #f0f8ff;
+    border-radius: 8px;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+/* Responsive container for skills */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .skills-container {
+        gap: 1rem;
+    }
+
+    .skill-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%; /* Full-width cards for small screens */
+    }
+
+    .first, .second, .third, .fourth, .firth, .six, .seven, .nine, .ten {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem; /* Slightly reduce font size on small screens */
+    }
+
+    ul {
+        padding: 0.625rem 0;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+        margin: 1rem 0;
+    }
+
+    .image1 {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Adjust image1 for better responsiveness */
+.image1 {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 4px solid #0057d9;
+}
+
+/* Styling for the greeting section */
+.six {
+    background: #f0f8ff; /* AliceBlue background for consistency */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the section */
+    margin: 20px; /* Margin around the section */
+    max-width: 300px; /* Limit the width for better alignment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: absolute; /* Position it absolutely */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1; /* Ensure it's on top of other content */
+}
+
+/* Greeting text styling */
+.six p {
+    font-size: 1.125rem; /* Font size for the greeting text */
+    color: #0066cc; /* Dark blue color for text */
+    margin: 0 0 10px 0; /* Remove top margin, add bottom margin */
+}
+
+/* Button styling */
+.six button {
+    background-color: #0066cc; /* Dark blue background for the button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: block; /* Ensure the button is displayed as a block element */
+    margin: 10px 0; /* Space around the button */
+}
+
+.six button:hover {
+    background-color: #004a99; /* Darker blue on hover */
+}
+
+/* Styling for the horizontal rules */
+.six hr {
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ddd; /* Light gray line */
+    margin: 10px 0; /* Space above and below the line */
+}
+
+/* Responsive design for greeting section */
+@media (max-width: 768px) {
+    .six {
+        position: relative; /* Remove absolute positioning on smaller screens */
+        margin: 20px auto; /* Center the section */
+        max-width: 90%; /* Adjust the width for smaller screens */
+    }
+}
+
+/* Styling for the footer container */
+.footer1 {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: space-around; /* Space out items evenly */
+    align-items: center; /* Center items vertically */
+    background: #f0f8ff; /* AliceBlue background for consistency */
+    border-top: 2px solid #0066cc; /* Dark blue border on top */
+    padding: 20px; /* Padding inside the footer */
+    margin: 20px auto; /* Center the footer horizontally and add margin */
+    width: 90%; /* Width of the footer container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* Allows for margin adjustments */
+    bottom: 0; /* Position at the bottom of its container */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer1 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 15px;
+    }
+}
+
+/* Container for slideshow and description */
+.projects-container {
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: space-between; /* Space items evenly */
+    gap: 20px; /* Space between the slideshow and description */
+    margin-top: 20px; /* Space above the container */
+}
+
+/* Responsive design for projects container */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack slideshow and descriptions vertically */
+        gap: 10px; /* Smaller gap on mobile */
+    }
+}
+
+/* Styling for the slideshow */
+.slideshow {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
+}
+
+.project-image {
+    width: 100%; /* Responsive width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 15px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Container for project descriptions */
+.project-descriptions {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: column; /* Stack descriptions vertically */
+    gap: 20px; /* Space between descriptions */
+}
+
+/* Styling for each project item */
+.project-item {
+    background: #f0f8ff; /* AliceBlue background for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    padding: 20px; /* Padding inside sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.project-item h3 {
+    margin-top: 0; /* Remove top margin for headings */
+    color: #333; /* Dark text color for better readability */
+}
+
+.project-item p {
+    margin-bottom: 0; /* Remove bottom margin for paragraphs */
+    color: #666; /* Slightly lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive adjustments for project-item */
+@media (max-width: 768px) {
+    .project-item {
+        padding: 15px;
+    }
+}
+
+/*about page */
+/* Main content styling */
+main {
+    padding: 80px 20px 20px; /* Add padding to account for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff; /* White background for the section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+    text-align: center;
+}
+
+/*contact page */
+/* Responsive contact form adjustments */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 15px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Contact Us Form */
+#overlay {
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for more depth */
+    max-width: 700px; /* Wider form to use more page space */
+    margin: 0 auto; /* Center the form */
+    animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Form header */
+#overlay h1 {
+    color: #0066cc;
+    font-size: 2.5rem; /* Slightly larger font for prominence */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Labels for form fields */
+#overlay label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields and textarea */
+#overlay input[type="text"],
+#overlay input[type="email"],
+#overlay textarea {
+    width: 100%; 
+    padding: 12px; /* Slightly more padding for comfort */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+#overlay input[type="text"]:focus,
+#overlay input[type="email"]:focus,
+#overlay textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Light blue glow on focus */
+}
+
+/* Submit button */
+#overlay input[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center the button */
+}
+
+#overlay input[type="submit"]:hover {
+    background-color: #004a99;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Success message */
+#success {
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Newsletter Signup */
+.newsletter {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto; /* Center newsletter box */
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.newsletter h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.newsletter p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#newsletter-form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 150px);
+    margin-right: 10px;
+}
+
+#newsletter-form input[type="submit"] {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#newsletter-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Interactive Elements */
+.interactive-elements {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.interactive-elements h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.interactive-elements button {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-elements button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Map Location Section */
+.map-location {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.map-location h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.map-location p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    padding: 30px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.upcoming-events h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.upcoming-events hr {
+    border: 0;
+    height: 2px;
+    background: #007bff;
+    margin: 30px auto;
+    width: 80px; /* Small centered line under title */
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 280px; /* Prevent items from getting too small */
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.event-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.event-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #overlay,
+    .newsletter,
+    .interactive-elements,
+    .map-location {
+        padding: 20px;
+    }
+
+    .event-item {
+        width: 100%; /* Full-width event items on small screens */
+    }
+}
+
+/* Redesigned Footer Section */
+.footer-redesign {
+    background-color: #003366; /* Darker blue background for modern look */
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added depth with shadow */
+}
+
+.footer-redesign footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 23%; /* Equal width for each footer item */
+}
+
+.footer-item i {
+    font-size: 30px; /* Increased icon size */
+    margin-bottom: 10px;
+    color: #ffdd57; /* Gold color for the icons */
+}
+
+.footer-item span {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-item a {
+    color: #ffdd57; /* Gold color for links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-item a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-redesign footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-item {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-item i {
+        font-size: 25px; /* Smaller icons on small screens */
+    }
+
+    .footer-item span, .footer-item a {
+        font-size: 14px; /* Adjust text size */
+    }
+}
+

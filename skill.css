@@ -1,0 +1,220 @@
+/* Global Styles */
+body {
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft blue gradient */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #0057d9; /* Blue background for nav */
+    margin: 0;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+ul li {
+    position: relative;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffdd57; /* Gold color on hover */
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #ffdd57; /* Gold underline effect */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #004aad;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow skills to stack on smaller screens */
+    margin-bottom: 30px;
+}
+
+.skills, .proficiency-section {
+    width: 45%;
+}
+
+h2 {
+    color: #0066cc;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip .content {
+    visibility: hidden;
+    opacity: 0;
+    width: 280px;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 10;
+}
+
+.tooltip:hover .content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: #f7f7f7;
+}
+
+/* Skill Proficiency Bars */
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    margin: 15px 0;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Proficiency Levels */
+.html-css {
+    width: 80%;
+}
+
+.javascript {
+    width: 70%;
+}
+
+.programming {
+    width: 90%;
+}
+
+.interpersonal {
+    width: 75%;
+}
+
+.analytical {
+    width: 85%;
+}
+
+/* Tooltip Icon */
+.tooltip-icon {
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .skills-section {
+        flex-direction: column;
+    }
+
+    .skills, .proficiency-section {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    body {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
