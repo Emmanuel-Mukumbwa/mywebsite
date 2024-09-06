@@ -15,6 +15,7 @@ body {
 }
 
 ul {
+    font-size: 25px; /* Increase font size to 18px */
     list-style: none;
     display: flex;
     justify-content: center;

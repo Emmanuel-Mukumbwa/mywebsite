@@ -48,7 +48,6 @@ ul li:hover::after {
     left: 0;
 }
 
-
 /* Main content styling */
 main {
     padding: 80px 20px 20px;
@@ -93,17 +92,19 @@ main {
 .service-block {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px; /* Space between items */
     justify-content: space-between;
 }
 
+/* Service card styling */
 .service-card {
-    width: 45%;
+    flex: 1 1 45%; /* Responsive width */
     background: #f0f8ff; /* AliceBlue background for items */
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0; /* Remove margin for flex items */
 }
 
 .service-card:hover {
@@ -126,3 +127,114 @@ main {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        padding: 30px;
+    }
+
+    .services h1 {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 20px;
+    }
+
+    .services h1 {
+        font-size: 1.75rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-item .description {
+        font-size: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Redesigned Footer Section */
+.footer-redesign {
+    background-color: #003366; /* Darker blue background for modern look */
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added depth with shadow */
+}
+
+.footer-redesign footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 23%; /* Equal width for each footer item */
+}
+
+.footer-item i {
+    font-size: 30px; /* Increased icon size */
+    margin-bottom: 10px;
+    color: #ffdd57; /* Gold color for the icons */
+}
+
+.footer-item span {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-item a {
+    color: #ffdd57; /* Gold color for links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-item a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-redesign footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-item {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-item i {
+        font-size: 25px; /* Smaller icons on small screens */
+    }
+
+    .footer-item span, .footer-item a {
+        font-size: 14px; /* Adjust text size */
+    }
+}
+
