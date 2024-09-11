@@ -1,12 +1,15 @@
-/* Reset default margin and padding for the body */
+/* Global Styles */
 body {
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft blue gradient */
+    font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f9f9; /* Light background for the page */
+    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* Navigation styling */
+/* Navigation Bar */
 ul {
     list-style: none;
     display: flex;
@@ -14,6 +17,7 @@ ul {
     padding: 20px 0;
     background-color: #0057d9; /* Blue background for nav */
     margin: 0;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
 ul li {
@@ -48,9 +52,15 @@ ul li:hover::after {
     left: 0;
 }
 
+
 /* Main content styling */
 main {
-    padding: 80px 20px 20px;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Services section styling */
